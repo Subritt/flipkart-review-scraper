@@ -48,6 +48,6 @@ st.download_button(
     mime='text/csv',
 )
 
-st.table(df.style.hide_index())
+# st.table(df.style.hide_index())
 
 
