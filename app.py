@@ -3,6 +3,7 @@ import csv
 from bs4 import BeautifulSoup
 import streamlit as st
 import pandas as pd
+import numpy as np
 
 url = f'https://www.flipkart.com/apple-2020-macbook-air-m1-8-gb-256-gb-ssd-mac-os-big-sur-mgn63hn-a/product-reviews/itmde54f026889ce?pid=COMFXEKMGNHZYFH9&lid=LSTCOMFXEKMGNHZYFH9P56X45&marketplace=FLIPKART'
 response = requests.get(url)
@@ -36,8 +37,14 @@ def get_reviews(url):
 
     return reviews
 
-df = pd.DataFrame(get_reviews(url))
-csv_file = df.to_csv().encode('utf-8')
+# df = pd.DataFrame(get_reviews(url))
+# csv_file = df.to_csv().encode('utf-8')
+
+df = pd.DataFrame(
+   np.random.randn(10, 5),
+   columns=('col %d' % i for i in range(5)))
+
+st.table(df)
 
 st.write('# Review Summary')
 
@@ -48,6 +55,6 @@ st.download_button(
     mime='text/csv',
 )
 
-# st.table(df)
+st.table(df)
 
 
