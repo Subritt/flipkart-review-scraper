@@ -38,13 +38,12 @@ def get_reviews(url):
     return reviews
 
 # df = pd.DataFrame(get_reviews(url))
-# csv_file = df.to_csv().encode('utf-8')
 
 df = pd.DataFrame(
    np.random.randn(10, 5),
    columns=('col %d' % i for i in range(5)))
 
-st.table(df)
+csv_file = df.to_csv().encode('utf-8')
 
 st.write('# Review Summary')
 
