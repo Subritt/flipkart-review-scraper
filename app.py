@@ -48,6 +48,6 @@ st.download_button(
     mime='text/csv',
 )
 
-st.table(df)
+# st.table(df)
 
 
