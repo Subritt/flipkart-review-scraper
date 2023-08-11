@@ -2,8 +2,4 @@ Flask
 requests
 bs4
 streamlit
-<<<<<<< HEAD
 pandas
-=======
-pandas
->>>>>>> ee0a409e30e9fc93da19c78e569cecce09c699e6
